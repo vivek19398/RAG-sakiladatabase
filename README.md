@@ -1,6 +1,6 @@
 🎬 Sakila Database Chat (Local LLM + LangGraph)
 A fully local, offline Text-to-SQL chat application built on the Sakila MySQL database using LangGraph, LangChain, FastAPI, Streamlit, and a local Ollama LLM.
-The app converts natural-language questions into safe, read-only SQL, executes them on MySQL, and returns human-readable answers—without sending any data to the internet.
+The app converts natural-language questions into safe, read-only SQL, executes them on MySQL, and returns human-readable answers — without sending any data to the internet.
 ✨ Features
 🔐 100% local & offline (no APIs, no cloud)
 🤖 Local LLM via Ollama (qwen2.5:14b)
@@ -53,9 +53,9 @@ Database	MySQL (Sakila)
 📁 Project Structure
 sakila-chat/
 │
-├── app.py        # FastAPI backend + LangGraph
-├── ui.py         # Streamlit chat UI
-├── index.html    # Optional HTML frontend
+├── app.py          # FastAPI backend + LangGraph
+├── ui.py           # Streamlit chat UI
+├── index.html      # Optional HTML frontend
 ├── README.md
 └── requirements.txt
 ⚙️ Prerequisites
@@ -64,19 +64,21 @@ MySQL Server
 Sakila database loaded
 Ollama installed
 🧠 Install Ollama & Model
-Install Ollama:
+Install Ollama
 👉 https://ollama.com/download
-Verify:
+Verify installation:
 ollama --version
-Download the model (one-time):
+Download the model (one-time)
 ollama pull qwen2.5:14b
 🐍 Python Setup
-Create virtual environment:
+Create virtual environment
+macOS / Linux
 python -m venv venv
-source venv/bin/activate      # macOS/Linux
-# OR
-venv\Scripts\activate         # Windows
-Install dependencies:
+source venv/bin/activate
+Windows
+python -m venv venv
+venv\Scripts\activate
+Install dependencies
 pip install fastapi uvicorn streamlit mysql-connector-python sqlparse
 pip install langchain langgraph langchain-ollama
 🗄️ Database Setup
@@ -102,7 +104,7 @@ streamlit run ui.py
 Open in browser:
 http://localhost:8501
 🌐 Optional: HTML UI
-Open index.html in a browser.
+Open index.html in your browser.
 It calls the FastAPI backend at /chat.
 🧪 Example Questions
 List 5 films with their rental rate
